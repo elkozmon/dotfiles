@@ -101,7 +101,7 @@ exit_status() {
 }
 
 PS1="${COLOR_BHI_GREEN}\u${COLOR_BHI_WHITE}@${COLOR_BHI_GREEN}\h "
-PS1+="${FG_CYAN}\w"
+PS1+="${COLOR_BHI_CYAN}\w"
 PS1+="${COLOR_NO_COLOUR}\$(exit_status)\$(git_prompt)"
 PS1+=" ${COLOR_BHI_YELLOW}\$"
 PS1+="\[$(tput sgr0)\] "
