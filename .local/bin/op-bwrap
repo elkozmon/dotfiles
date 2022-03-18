@@ -1,0 +1,19 @@
+#!/bin/bash
+bwrap \
+--new-session \
+--unshare-ipc \
+--unshare-pid \
+--unshare-uts \
+--unshare-cgroup-try \
+--bind /tmp /tmp \
+--ro-bind /lib64 /lib64 \
+--ro-bind /usr/local/bin/op /usr/local/bin/op \
+--ro-bind /etc/passwd /etc/passwd \
+--ro-bind /etc/ssl /etc/ssl \
+--ro-bind /etc/pki /etc/pki \
+--ro-bind /etc/resolv.conf /etc/resolv.conf \
+--ro-bind /run/systemd/resolve/resolv.conf /run/systemd/resolve/resolv.conf \
+--ro-bind "$HOME/.local/bin" "$HOME/.local/bin" \
+--bind "$HOME/.config/op" "$HOME/.config/op" \
+--setenv OP_SESSION_my "${OP_SESSION_my:-none}" \
+-- op --session "${OP_SESSION_my}" "$@"

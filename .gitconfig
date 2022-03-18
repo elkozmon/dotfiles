@@ -1,0 +1,11 @@
+[user]
+	email = elkozmon@elkozmon.com
+	name = Lubos Kozmon
+[color]
+	ui = true
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff

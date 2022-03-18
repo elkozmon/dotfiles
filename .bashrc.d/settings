@@ -1,0 +1,30 @@
+#!/bin/bash
+# When the command contains an invalid history operation (for instance when
+# using an unescaped "!" (I get that a lot in quick e-mails and commit
+# messages) or a failed substitution (e.g. "^foo^bar" when there was no "foo"
+# in the previous command line), do not throw away the command line, but let me
+# correct it.
+shopt -s histreedit
+
+# Don't try to execute any command containing a history substitution. 
+# Instead set the prompt to the would-be resulting command.
+shopt -s histverify
+
+# append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# rezize the windows-size if needed
+shopt -s checkwinsize
+
+# check if the user isn't root
+if [ "$UID" != 0 ]; then
+  # case-insensitive globbing (used in path name expansion)
+  shopt -s nocaseglob
+
+  # autocorrect typos in path names when using `cd`
+  shopt -s cdspell
+fi
+
+# Do not autocomplete when accidentally pressing Tab on an empty line. (It takes
+# forever and yields "Display all 15 gazillion possibilites?")
+shopt -s no_empty_cmd_completion

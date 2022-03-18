@@ -1,0 +1,8 @@
+#!/bin/bash
+alias copy="command xclip -sel clip"
+alias uncopy="command xclip -sel clip < /dev/null"
+alias paste="command xclip -sel clip -o"
+alias lower="command tr '[:upper:]' '[:lower:]'"
+alias upper="command tr '[:lower:]' '[:upper:]'"
+alias ssh-tmp="command ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR"
+alias op="command op-bwrap"

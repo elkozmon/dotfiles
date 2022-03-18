@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+shopt -s inherit_errexit
+
+op-bwrap get item "$1" --fields password | tr -d '\n' | xclip -sel clip
