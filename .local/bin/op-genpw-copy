@@ -2,5 +2,5 @@
 set -euo pipefail
 shopt -s inherit_errexit
 
-op-bwrap edit item "$1" --generate-password="$2"
-op-bwrap get item "$1" --fields password | tr -d '\n' | xclip -sel clip
+command op edit item "$1" --generate-password="$2"
+command op get item "$1" --fields password | tr -d '\n' | xclip -sel clip
