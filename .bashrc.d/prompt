@@ -96,7 +96,7 @@ exit_status() {
     EXIT_CODE="$?"
 
     if [ "$EXIT_CODE" -ne 0 ]; then
-        echo -ne " ${COLOR_BG_HI_RED}${COLOR_B_BLACK} ${EXIT_CODE} ${COLOR_NO_COLOUR}"
+        echo -ne "${COLOR_HI_RED} ${EXIT_CODE}${COLOR_NO_COLOUR}"
     fi
 }
 
