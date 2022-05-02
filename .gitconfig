@@ -1,6 +1,7 @@
 [user]
 	email = elkozmon@elkozmon.com
 	name = Lubos Kozmon
+	signingKey = F6869B3AD2B63122
 [color]
 	ui = true
 [core]
