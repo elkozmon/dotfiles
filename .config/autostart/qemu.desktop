@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=QEMU Session
+Exec=/usr/bin/virsh -c qemu:///session
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
