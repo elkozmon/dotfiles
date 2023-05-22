@@ -1,6 +1,6 @@
 %YAML 1.3
 ---
-- MouseGesture: Mouse Down
+- MouseGesture: Mouse Up
 - KeyPress:
   - F11
   - click
@@ -18,7 +18,7 @@
   - click
 ...
 ---
-- MouseGesture: Mouse Up
+- MouseGesture: []
 - KeyPress:
   - Super_L
   - click
