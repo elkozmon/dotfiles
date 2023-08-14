@@ -25,4 +25,9 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 
+# Initialize Starship
+if [ -x "$(command -v starship)" ]; then
+	eval "$(starship init bash)"
+fi
+
 unset rc

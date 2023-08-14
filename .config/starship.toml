@@ -1,0 +1,27 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+right_format = "$time"
+
+[time]
+disabled = false
+style = "bold bright-black"
+format = "[$time]($style)"
+
+[line_break]
+disabled = true
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+
+[[battery.display]]
+threshold = 20
+
+[kubernetes]
+disabled = false
+
+[cmd_duration]
+min_time = 5000
+show_milliseconds = false
+
