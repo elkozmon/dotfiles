@@ -24,6 +24,7 @@
     sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: MX Master 3S
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _unitId: '00000000'
   backlight-timed: 1
   change-host: null
